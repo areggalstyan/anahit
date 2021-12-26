@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .prose h1 {
+        @apply text-5xl;
+    }
+
+    .prose h2 {
+        @apply text-4xl;
+    }
+
+    .prose h3 {
+        @apply text-3xl;
+    }
+
+    .prose h4 {
+        @apply text-2xl;
+    }
+
+    .prose h5 {
+        @apply text-xl;
+    }
+
+    .prose ul li {
+        @apply ml-5 pl-3 list-[circle];
+    }
+}
