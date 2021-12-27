@@ -1,5 +1,5 @@
 <script context="module">
-  import { loadData } from '$lib/content';
+  import { loadData, violinMenu } from '$lib/content';
 
   export async function load({ fetch, page }) {
     return loadData('repertoire', fetch, page);
@@ -21,7 +21,7 @@
 </script>
 
 <div class="min-h-screen bg-text flex flex-col">
-  <Header {data} {lang} route="/violin/repertoire" />
+  <Header {data} {lang} route="/violin/repertoire" local={violinMenu(data, lang)} />
   <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
     <div>
       <TextBar alignment="left">
