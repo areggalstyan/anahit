@@ -83,7 +83,7 @@ export const recordsMenu = (data, lang) => {
 }
 
 export function url(image) {
-  return `${STRAPI_URL}${image['url']}`;
+  return image['url'];
 }
 
 export function format(text) {
