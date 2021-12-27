@@ -1,4 +1,4 @@
-const supportedLanguages = ['ru', 'en', 'hy'];
+const supportedLanguages = ['en', 'ru', 'hy'];
 
 export async function handle({ request, resolve }) {
   const response = await resolve(request);
