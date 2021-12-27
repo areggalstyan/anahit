@@ -7,7 +7,10 @@
 </script>
 
 <footer class="bg-secondary p-5 pl-10 pr-10 lg:flex lg:items-center mt-auto">
-  <div class="lg:inline-block lg:w-auto w-full flex justify-center z-10 mb-4 lg:mb-0">
+  <div class="lg:inline-block lg:absolute w-full lg:ml-[-2.5rem]">
+    <NavBar {items} alignment="center" last />
+  </div>
+  <div class="lg:inline-block lg:w-auto w-full flex justify-center z-10 mt-4 lg:mt-0">
     <IconLink href={links[0]} external
       ><i class="fab fa-facebook text-3xl" title="Facebook" /></IconLink
     >
@@ -23,8 +26,5 @@
     <IconLink href={links[4]} external
       ><i class="fab fa-facebook text-3xl ml-3" title="Facebook" /></IconLink
     >
-  </div>
-  <div class="lg:inline-block lg:absolute w-full lg:ml-[-2.5rem]">
-    <NavBar {items} alignment="center" last />
   </div>
 </footer>
