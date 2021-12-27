@@ -15,13 +15,11 @@
   export let data;
   export let lang;
 
-  if (data['imageList']) {
-    data['imageList'] = data['imageList'].map(article => {
-      article['text'] = article['text'].replace(/\/O/g,
-        '<i class="fas fa-record-vinyl text-3xl text-secondary mr-3"></i>');
-      return article;
-    });
-  }
+  data['imageList'] = data['imageList'].map(article => {
+    article['text'] = article['text'].replace(/\/O/g,
+      '<i class="fas fa-record-vinyl text-3xl text-secondary mr-3"></i>');
+    return article;
+  });
 </script>
 
 <svelte:head>
