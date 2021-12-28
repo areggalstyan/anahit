@@ -22,7 +22,8 @@
       name: getNextLang(lang) === 'en' ? 'English'
       : getNextLang(lang) === 'hy' ? 'Հայերեն' : 'Русский',
       classes: 'ml-2 sm:ml-4 border-white border-[1px] p-1 pl-2 pr-2 rounded',
-      href: `/${getNextLang(lang)}${route}`
+      href: `/${getNextLang(lang)}${route}`,
+      external: true
     }
   ]}
 />
