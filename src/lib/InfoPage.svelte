@@ -26,6 +26,7 @@
     </Articles>
     {#if current && bigCalendar}
       <TextBar alignment="left">
+        <i class="fas fa-music text-3xl text-white mr-3" />
         <p class="mt-2 border-[1px] border-secondary rounded p-3 pl-5 pr-5">
           <Format bind:text={current} />
         </p>
