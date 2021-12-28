@@ -26,10 +26,12 @@
     </Articles>
     {#if current && bigCalendar}
       <TextBar alignment="left">
-        <i class="fab fa-itunes-note text-3xl text-secondary mr-4" />
-        <p class="mt-2 border-[1px] border-secondary rounded p-3 pl-5 pr-5 inline-block">
-          <Format bind:text={current} />
-        </p>
+        <div class="flex mt-2">
+          <i class="fab fa-itunes-note text-3xl text-secondary mr-4" />
+          <p class="border-[1px] border-secondary rounded p-3 pl-5 pr-5 inline-block">
+            <Format bind:text={current} />
+          </p>
+        </div>
       </TextBar>
     {/if}
   </div>
