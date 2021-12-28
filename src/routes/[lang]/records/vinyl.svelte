@@ -17,7 +17,7 @@
 
   data['imageList'] = data['imageList'].map(article => {
     article['text'] = article['text'].replace(/\/O/g,
-      '<i class="fas fa-record-vinyl text-3xl text-secondary mr-3"></i>');
+      '<i class="fas fa-record-vinyl text-3xl text-secondary mr-4"></i>');
     return article;
   });
 </script>

@@ -17,7 +17,7 @@
   export let lang;
 
   data['videoList'] = data['videoList'].map(video => {
-    video['text'] = video['text'].replace(/\/O/g, '<i class="fas fa-play-circle text-3xl text-secondary mr-3"></i>');
+    video['text'] = video['text'].replace(/\/O/g, '<i class="fas fa-play-circle text-3xl text-secondary mr-4"></i>');
     return video;
   });
 </script>
