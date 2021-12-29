@@ -36,7 +36,7 @@
     {/if}
   </div>
   <div class="mt-5">
-    {#if data['calendar'] && data['calendar'].sort((a, b) => (a.length === 0 || !a.trim()) ? -1 : a.date - b.date)}
+    {#if data['calendar'] && data['calendar'].sort((a, b) => !a.length ? -1 : a.date - b.date)}
       {#if data['calendarTitle']}
         <h2 class="text-center">{data['calendarTitle']}</h2>
       {/if}
