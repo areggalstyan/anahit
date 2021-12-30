@@ -29,17 +29,18 @@
   <Header {data} {lang} route="/violin/repertoire" local={violinMenu(data, lang)} />
   <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
     <div>
-      <Articles {data} />
-      <TextBar alignment="left">
+      <Articles {data}>
         <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
         <h2 class="text-2xl">{data['repertoire'].toUpperCase()}</h2>
-        <button class="mr-3 mt-5" class:font-bold={selected === data['all']} on:click={() => selected = data['all']}>
+      </Articles>
+      <TextBar alignment="left">
+        <button class="mr-3" class:font-bold={selected === data['all']} on:click={() => selected = data['all']}>
           {data['all'].toUpperCase()}</button>
         {#each alphabet as letter}
-          <button class="mr-3 mt-5" class:font-bold={selected === letter}
+          <button class="mr-3" class:font-bold={selected === letter}
                   on:click={() => selected = letter}>{letter}</button>
         {/each}
-        <p class="mt-12">
+        <p class="mt-5">
           {#if selected}
             {#each data['lines'].filter(line => selected === data['all']
               ? line['line'] : line['line'][0] === selected).map(line => line['line']).sort() as line}
