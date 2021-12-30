@@ -11,7 +11,7 @@
   import Footer from '$lib/Footer.svelte';
   import TextBar from '$lib/TextBar.svelte';
   import Images from '$lib/Images.svelte';
-  import Articles from '../../../lib/Articles.svelte';
+  import Articles from '$lib/Articles.svelte';
 
   export let data;
   export let lang;
