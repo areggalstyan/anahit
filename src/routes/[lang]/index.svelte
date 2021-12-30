@@ -31,7 +31,7 @@
     { name: data['biography'], src: url(data['biographyImage']), href: `/${lang}/anahit/biography` },
     { name: data['repertoire'], src: url(data['repertoireImage']), href: `/${lang}/violin/repertoire` },
     { name: data['records'], src: url(data['recordsImage']), href: `/${lang}/records` },
-    { name: data['pedagogy'], src: url(data['pedagogyImage']), href: `/${lang}/pedagogy` }
+    { name: data['pedagogue'], src: url(data['pedagogyImage']), href: `/${lang}/pedagogy` }
   ]}
 />
 <TextBar><Format text={data['article2']} /></TextBar>
@@ -44,7 +44,7 @@
 <TextBar><Format text={data['article3']} /></TextBar>
 <ImageBar
   images={[
-    { name: data['research'], src: url(data['researchImage']), href: `/${lang}/research` },
+    { name: data['scientist'], src: url(data['researchImage']), href: `/${lang}/research` },
     { name: data['books'], src: url(data['booksImage']), href: `/${lang}/research/books` },
     { name: data['gallery'], src: url(data['galleryImage']), href: `/${lang}/gallery` },
     { name: data['diaryStories'], src: url(data['diaryStoriesImage']), href: `/${lang}/anahit/diary-stories` }

@@ -13,7 +13,7 @@ export const globalMenu = (data, lang) => {
     items: [
       { name: data['name'], href: `/${lang}/anahit` },
       {
-        name: data['violin'],
+        name: data['musician'],
         dropdown: [
           { name: data['violinHome'], href: `/${lang}/violin` },
           { name: data['reviews'], href: `/${lang}/violin/reviews` },
@@ -22,7 +22,7 @@ export const globalMenu = (data, lang) => {
         ]
       },
       {
-        name: data['research'],
+        name: data['scientist'],
         dropdown: [
           { name: data['researchHome'], href: `/${lang}/research` },
           { name: data['dissertation'], href: `/${lang}/research/dissertation` },
@@ -30,11 +30,11 @@ export const globalMenu = (data, lang) => {
           { name: data['articles'], href: `/${lang}/research/articles` }
         ]
       },
-      { name: data['pedagogy'], href: `/${lang}/pedagogy` },
+      { name: data['pedagogue'], href: `/${lang}/pedagogy` },
       { name: data['records'], href: `/${lang}/records` },
       { name: data['heritage'], href: `/${lang}/heritage` }
     ],
-    more: data['musician']
+    more: data['persona']
   };
 }
 

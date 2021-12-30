@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-  <title>{data['pedagogy']}</title>
+  <title>{data['pedagogue']}</title>
 </svelte:head>
 
-<InfoPage route="/pedagogy" {data} {lang} subtitle={data['pedagogy'].toUpperCase()} />
+<InfoPage route="/pedagogy" {data} {lang} subtitle={data['pedagogue'].toUpperCase()} />
