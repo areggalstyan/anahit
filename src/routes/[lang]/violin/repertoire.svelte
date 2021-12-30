@@ -21,6 +21,10 @@
   $: selected = data['all'];
 </script>
 
+<svelte:head>
+  <title>{data['repertoire']}</title>
+</svelte:head>
+
 <div class="min-h-screen bg-text flex flex-col">
   <Header {data} {lang} route="/violin/repertoire" local={violinMenu(data, lang)} />
   <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
