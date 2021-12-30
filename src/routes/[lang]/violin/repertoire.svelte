@@ -11,6 +11,7 @@
   import Footer from '$lib/Footer.svelte';
   import TextBar from '$lib/TextBar.svelte';
   import Images from '$lib/Images.svelte';
+  import Articles from '$lib/Articles.svelte';
 
   export let data;
   export let lang;
@@ -20,10 +21,15 @@
   $: selected = data['all'];
 </script>
 
+<svelte:head>
+  <title>{data['repertoire']}</title>
+</svelte:head>
+
 <div class="min-h-screen bg-text flex flex-col">
   <Header {data} {lang} route="/violin/repertoire" local={violinMenu(data, lang)} />
   <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
     <div>
+      <Articles {data} />
       <TextBar alignment="left">
         <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
         <h2 class="text-2xl">{data['repertoire'].toUpperCase()}</h2>
