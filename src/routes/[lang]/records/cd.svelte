@@ -1,5 +1,5 @@
 <script context="module">
-  import { loadData, recordsMenu, url } from '$lib/content';
+  import { loadData } from '$lib/content';
 
   export async function load({ fetch, page }) {
     return loadData('cd', fetch, page);
@@ -7,6 +7,7 @@
 </script>
 
 <script>
+  import { recordsMenu, url } from '$lib/content';
   import Header from '$lib/Header.svelte';
   import TextBar from '$lib/TextBar.svelte';
   import Format from '$lib/Format.svelte';

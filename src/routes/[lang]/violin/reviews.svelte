@@ -1,5 +1,5 @@
 <script context="module">
-  import { loadData, violinMenu } from '$lib/content';
+  import { loadData } from '$lib/content';
 
   export async function load({ fetch, page }) {
     return loadData('reviews', fetch, page);
@@ -7,6 +7,7 @@
 </script>
 
 <script>
+  import { violinMenu } from '$lib/content';
   import InfoPage from '$lib/InfoPage.svelte';
 
   export let data;

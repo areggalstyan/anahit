@@ -1,5 +1,5 @@
 <script context="module">
-  import { loadData, researchMenu } from '$lib/content';
+  import { loadData } from '$lib/content';
 
   export async function load({ fetch, page }) {
     return loadData('research-home', fetch, page);
@@ -7,6 +7,7 @@
 </script>
 
 <script>
+  import { researchMenu } from '$lib/content';
   import InfoPage from '$lib/InfoPage.svelte';
 
   export let data;

@@ -1,5 +1,5 @@
 <script context="module">
-  import { loadData, recordsMenu, url } from '$lib/content';
+  import { loadData } from '$lib/content';
 
   export async function load({ fetch, page }) {
     return loadData('vinyl', fetch, page);
@@ -7,6 +7,7 @@
 </script>
 
 <script>
+  import { recordsMenu, url } from '$lib/content';
   import Format from '$lib/Format.svelte';
   import TextBar from '$lib/TextBar.svelte';
   import Header from '$lib/Header.svelte';

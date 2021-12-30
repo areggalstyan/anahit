@@ -1,5 +1,5 @@
 <script context="module">
-  import { loadData, biographyMenu } from '$lib/content';
+  import { loadData } from '$lib/content';
 
   export async function load({ fetch, page }) {
     return loadData('diary-stories', fetch, page);
@@ -7,6 +7,7 @@
 </script>
 
 <script>
+  import { biographyMenu } from '$lib/content';
   import InfoPage from '$lib/InfoPage.svelte';
 
   export let data;
