@@ -17,5 +17,5 @@
   <title>{data['researchHome']}</title>
 </svelte:head>
 
-<InfoPage route="/research" {data} {lang} subtitle={data['research'].toUpperCase()}
+<InfoPage route="/research" {data} {lang} subtitle={data['researchHome'].toUpperCase()}
           local={researchMenu(data, lang)} />
