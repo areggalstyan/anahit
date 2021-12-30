@@ -12,7 +12,6 @@
   import TextBar from '$lib/TextBar.svelte';
   import ImageBar from '$lib/ImageBar.svelte';
   import VideoBar from '$lib/VideoBar.svelte';
-  import Logo from '$lib/Logo.svelte';
   import Slider from '$lib/Slider.svelte';
   import Footer from '$lib/Footer.svelte';
 
@@ -55,5 +54,4 @@
   slides={data['slider'].map(slide => url(slide))}
 />
 <TextBar><Format text={data['article5']} /></TextBar>
-<Logo {data} />
 <Footer {data} {lang} route="/" />

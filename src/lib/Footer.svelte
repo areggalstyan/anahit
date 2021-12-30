@@ -1,6 +1,7 @@
 <script>
   import { url } from '$lib/content';
   import AbstractFooter from './abstract/AbstractFooter.svelte';
+  import Logo from './Logo.svelte';
 
   export let data;
   export let lang;
@@ -21,4 +22,5 @@
     { name: data['contacts'], href: `/${lang}/contacts` }
   ]}
 />
+<Logo {data} />
 <audio src={url(data['background'])} autoplay loop></audio>
