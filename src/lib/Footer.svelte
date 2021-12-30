@@ -1,5 +1,5 @@
 <script>
-  import { getNextLang, url } from '$lib/content';
+  import { url } from '$lib/content';
   import AbstractFooter from './abstract/AbstractFooter.svelte';
 
   export let data;
@@ -8,6 +8,7 @@
 </script>
 
 <AbstractFooter
+  {route}
   links={[
     data['facebook1'],
     data['youtube'],
@@ -17,14 +18,7 @@
   ]}
   items={[
     { name: data['gallery'], href: `/${lang}/gallery` },
-    { name: data['contacts'], href: `/${lang}/contacts` },
-    {
-      name: getNextLang(lang) === 'en' ? 'English'
-      : getNextLang(lang) === 'hy' ? 'Հայերեն' : 'Русский',
-      classes: 'ml-2 sm:ml-4 border-white border-[1px] p-1 pl-2 pr-2 rounded',
-      href: `/${getNextLang(lang)}${route}`,
-      external: true
-    }
+    { name: data['contacts'], href: `/${lang}/contacts` }
   ]}
 />
 <audio src={url(data['background'])} autoplay loop></audio>

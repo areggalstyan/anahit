@@ -76,6 +76,11 @@
         </div>
       </li>
     {/each}
+    {#if $$slots.default}
+      <li class="inline-block">
+        <slot />
+      </li>
+    {/if}
   </ul>
 </nav>
 
