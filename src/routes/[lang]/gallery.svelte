@@ -12,55 +12,52 @@
   import Format from '$lib/Format.svelte';
   import { onMount } from 'svelte';
   import Footer from '$lib/Footer.svelte';
-  import { browser } from '$app/env';
 
   export let data;
   export let lang;
 
   onMount(() => {
-    if (browser) {
-      jQuery('.slider-solo').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-preview-solo'
-      });
+    jQuery('.slider-solo').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-preview-solo'
+    });
 
-      jQuery('.slider-preview-solo').slick({
-        infinite: true,
-        speed: 300,
-        variableWidth: true,
-        asNavFor: '.slider-solo',
-        focusOnSelect: true,
-        prevArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-left text-xl ' +
-          'text-white absolute top-1/2 z-10 transform translate-x-1/2 -translate-y-1/2 left-0"></i></button>',
-        nextArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-right text-xl ' +
-          'text-white absolute top-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 right-0"></i></button>'
-      });
+    jQuery('.slider-preview-solo').slick({
+      infinite: true,
+      speed: 300,
+      variableWidth: true,
+      asNavFor: '.slider-solo',
+      focusOnSelect: true,
+      prevArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-left text-xl ' +
+        'text-white absolute top-1/2 z-10 transform translate-x-1/2 -translate-y-1/2 left-0"></i></button>',
+      nextArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-right text-xl ' +
+        'text-white absolute top-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 right-0"></i></button>'
+    });
 
-      jQuery('.slider-team').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-preview-team'
-      });
+    jQuery('.slider-team').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-preview-team'
+    });
 
-      jQuery('.slider-preview-team').slick({
-        infinite: true,
-        speed: 300,
-        variableWidth: true,
-        asNavFor: '.slider-team',
-        focusOnSelect: true,
-        prevArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-left text-xl ' +
-          'text-white absolute top-1/2 z-10 transform translate-x-1/2 -translate-y-1/2 left-0"></i></button>',
-        nextArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-right text-xl ' +
-          'text-white absolute top-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 right-0"></i></button>'
-      });
-    }
+    jQuery('.slider-preview-team').slick({
+      infinite: true,
+      speed: 300,
+      variableWidth: true,
+      asNavFor: '.slider-team',
+      focusOnSelect: true,
+      prevArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-left text-xl ' +
+        'text-white absolute top-1/2 z-10 transform translate-x-1/2 -translate-y-1/2 left-0"></i></button>',
+      nextArrow: '<button class="cursor-pointer"><i class="fas fa-chevron-right text-xl ' +
+        'text-white absolute top-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 right-0"></i></button>'
+    });
   });
 </script>
 

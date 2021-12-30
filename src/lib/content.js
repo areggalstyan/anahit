@@ -83,7 +83,7 @@ export const recordsMenu = (data, lang) => {
 }
 
 export function url(image) {
-  return image['url'].replace('upload', 'upload/q_60');
+  return image['url'].replace('upload', 'upload/q_80');
 }
 
 export function format(text) {
