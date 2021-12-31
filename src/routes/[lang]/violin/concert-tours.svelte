@@ -7,7 +7,7 @@
 </script>
 
 <script>
-  import { violinMenu } from '$lib/content';
+  import { violinMenu, url } from '$lib/content';
   import TextBar from '$lib/TextBar.svelte';
   import Header from '$lib/Header.svelte';
   import Footer from '$lib/Footer.svelte';
