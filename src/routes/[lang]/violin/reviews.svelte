@@ -8,7 +8,11 @@
 
 <script>
   import { violinMenu } from '$lib/content';
-  import InfoPage from '$lib/InfoPage.svelte';
+  import Images from '$lib/Images.svelte';
+  import Footer from '$lib/Footer.svelte';
+  import Header from '$lib/Header.svelte';
+  import TextBar from '$lib/TextBar.svelte';
+  import Format from '$lib/Format.svelte';
 
   export let data;
   export let lang;
@@ -18,5 +22,25 @@
   <title>{data['reviews']}</title>
 </svelte:head>
 
-<InfoPage route="/violin/reviews" {data} {lang} subtitle={data['reviews'].toUpperCase()}
-          local={violinMenu(data, lang)}/>
+<Header {data} {lang} route="/violin/reviews" local={violinMenu(data, lang)} />
+<div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
+  <div>
+    <TextBar alignment="left">
+      <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
+      <h2 class="text-2xl">{data['reviews'].toUpperCase()}</h2>
+      {#each data['reviewList'] as { text, name, position }}
+        <p class="mt-12">
+          <Format {text} />
+          <span class="uppercase mt-3 inline-block"><Format text={name} /></span>
+          <span class="italic"><Format text={position} /></span>
+        </p>
+      {/each}
+    </TextBar>
+  </div>
+  <div class="mt-5">
+    <div class="bg-text p-5 md:grid md:grid-cols-4 md:gap-8 lg:block" class:pt-0={data['calendar']}>
+      <Images {data} />
+    </div>
+  </div>
+</div>
+<Footer {data} {lang} route="/violin/reviews" />
