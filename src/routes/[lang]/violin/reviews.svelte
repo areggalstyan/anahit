@@ -31,7 +31,7 @@
       {#each data['reviewList'] as { text, name, position }}
         <p class="mt-12">
           <Format {text} />
-          <span class="uppercase mt-3 inline-block"><Format text={name} /></span>
+          <span class="uppercase mt-2 inline-block"><Format text={name} /></span>
           <span class="italic"><Format text={position} /></span>
         </p>
       {/each}
