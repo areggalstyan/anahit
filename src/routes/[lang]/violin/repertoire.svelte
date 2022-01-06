@@ -51,7 +51,7 @@
         </p>
       </TextBar>
     </div>
-    <div class="bg-text p-5 md:grid md:grid-cols-4 md:gap-8 lg:block">
+    <div class="bg-text p-5 md:grid md:grid-cols-4 md:gap-8 lg:block mt-5">
       <Images {data} />
     </div>
   </div>
