@@ -91,29 +91,29 @@ export function format(text) {
 }
 
 export async function loadData(url, fetch, page) {
-  if (supportedLanguages.includes(page.params.lang)) {
-    const globalMenuRes = await fetch(`/${page.params.lang}/data/global-menu.json`);
-    const globalMenuData = await globalMenuRes.json();
+  if (supportedLanguages.includes(page.params.lang)) return;
 
-    const res = await fetch(`/${page.params.lang}/data/${url}.json`);
+  const globalMenuRes = await fetch(`/${page.params.lang}/data/global-menu.json`);
+  const globalMenuData = await globalMenuRes.json();
 
-    try {
-      const data = await res.json();
+  const res = await fetch(`/${page.params.lang}/data/${url}.json`);
 
-      return {
-        props: {
-          data: {
-            ...globalMenuData,
-            ...data
-          },
-          lang: page.params.lang
-        }
-      };
-    } catch {
-      return {
-        status: 302,
-        redirect: `/${page.params.lang}`
-      };
-    }
+  try {
+    const data = await res.json();
+
+    return {
+      props: {
+        data: {
+          ...globalMenuData,
+          ...data
+        },
+        lang: page.params.lang
+      }
+    };
+  } catch {
+    return {
+      status: 302,
+      redirect: `/${page.params.lang}`
+    };
   }
 }
