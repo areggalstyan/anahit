@@ -34,19 +34,19 @@
     </div>
   </div>
   <div class="lg:inline-block lg:w-auto w-full flex justify-center z-10 mt-4 lg:mt-0">
-    <IconLink href={links[0]} external
+    <IconLink href={links[0]} external target="_blank"
       ><i class="fab fa-facebook text-3xl" title="Facebook" /></IconLink
     >
-    <IconLink href={links[1]} external
+    <IconLink href={links[1]} external target="_blank"
       ><i class="fab fa-youtube text-3xl ml-3" title="Youtube" /></IconLink
     >
-    <IconLink href={links[2]} external
+    <IconLink href={links[2]} external target="_blank"
       ><i class="fas fa-graduation-cap text-3xl ml-3" title="Musical school" /></IconLink
     >
-    <IconLink href={links[3]} external
+    <IconLink href={links[3]} external target="_blank"
       ><i class="fas fa-envelope text-3xl ml-3" title="Email" /></IconLink
     >
-    <IconLink href={links[4]} external
+    <IconLink href={links[4]} external target="_blank"
       ><i class="fab fa-facebook text-3xl ml-3" title="Facebook" /></IconLink
     >
   </div>
