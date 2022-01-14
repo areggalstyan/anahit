@@ -24,6 +24,14 @@
     }
 
     .prose ul li, .prose ol li {
-        @apply ml-5 pl-3 list-[circle];
+        @apply ml-5 pl-3;
+    }
+
+    .prose ul li {
+        @apply list-[circle];
+    }
+
+    .prose ol li {
+        @apply list-decimal;
     }
 }
