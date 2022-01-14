@@ -40,7 +40,7 @@
     {#each data['imageList'] as cd}
       <div class="mt-12 md:flex">
         {#if cd['image']}
-          <img src={url(cd['image'])} alt="" class="border-[1px] border-secondary rounded w-80">
+          <img src={url(cd['image'])} alt="" class="border-[1px] border-secondary rounded">
         {/if}
         <p class="md:ml-12 md:mt-0 mt-3">
           <Format text={cd['text']} />
