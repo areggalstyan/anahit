@@ -31,8 +31,7 @@
   <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
     <div>
       <Articles {data}>
-        <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
-        <h2 class="text-2xl">{data['repertoire'].toUpperCase()}</h2>
+        <h1 class="text-3xl">{data['repertoire'].toUpperCase()}</h1>
       </Articles>
       <TextBar alignment="left">
         <button class="mr-3" class:font-bold={selected === data['all']} on:click={() => selected = data['all']}>

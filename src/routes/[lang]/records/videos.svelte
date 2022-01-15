@@ -26,8 +26,7 @@
 <Header {data} {lang} route="/records/videos" local={recordsMenu(data, lang)} />
 <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
   <TextBar alignment="left">
-    <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
-    <h2 class="text-2xl">{data['videos'].toUpperCase()}</h2>
+    <h1 class="text-3xl">{data['videos'].toUpperCase()}</h1>
     {#each data['articleList'] as { text }}
       <p class="mt-12">
         <Format {text} />

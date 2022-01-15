@@ -18,8 +18,7 @@
 <Header {data} {lang} route="/contacts" />
 <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
   <TextBar alignment="left">
-    <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
-    <h2 class="text-2xl">{data['contacts'].toUpperCase()}</h2>
+    <h1 class="text-3xl">{data['contacts'].toUpperCase()}</h1>
     <div class="lg:inline-block lg:mr-12">
       {#if data['address1'] || data['telephone1'] || data['email1'] || data['viber1'] || data['whatsapp1']}
         <p class="mt-12 rounded p-5 text-white bg-primary inline-flex flex-col">

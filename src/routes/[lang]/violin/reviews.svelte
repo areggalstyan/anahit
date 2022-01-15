@@ -26,8 +26,7 @@
 <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
   <div>
     <TextBar alignment="left">
-      <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
-      <h2 class="text-2xl">{data['reviews'].toUpperCase()}</h2>
+      <h1 class="text-3xl">{data['reviews'].toUpperCase()}</h1>
       {#each data['reviewList'] as { text, name, position }}
         <p class="mt-12">
           <Format {text} />

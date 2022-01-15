@@ -44,8 +44,7 @@
 <Header {data} {lang} route="/violin/concert-tours" local={violinMenu(data, lang)} />
 <div class="lg:grid md:p-8 bg-text">
   <TextBar alignment="left">
-    <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
-    <h2 class="text-2xl">{data['concertTours'].toUpperCase()}</h2>
+    <h1 class="text-3xl">{data['concertTours'].toUpperCase()}</h1>
     <div class="w-full text-center">
       <div id="map" class="h-96 md:h-[48rem] mt-12 bg-text"></div>
     </div>

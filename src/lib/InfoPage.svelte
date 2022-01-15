@@ -21,8 +21,7 @@
 <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
   <div>
     <Articles {data}>
-      <h1 class="text-3xl">{data['name'].toUpperCase()}</h1>
-      <h2 class="text-2xl">{subtitle}</h2>
+      <h1 class="text-3xl">{subtitle}</h1>
     </Articles>
     {#if current && bigCalendar}
       <TextBar alignment="left">

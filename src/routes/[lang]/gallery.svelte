@@ -72,8 +72,7 @@
 <Header {data} {lang} route="/gallery" />
 <div class="md:p-8 bg-text">
   <TextBar alignment="left">
-    <h1 class="text-3xl">{data['gallery'].toUpperCase()}</h1>
-    <h2 class="text-2xl">{data['solo'].toUpperCase()}</h2>
+    <h1 class="text-3xl">{data['solo'].toUpperCase()}</h1>
 
     {#if data['soloArticle']}
       <p class="mt-12">
