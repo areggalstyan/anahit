@@ -23,12 +23,12 @@
 </svelte:head>
 
 <Header {data} {lang} route="/violin/reviews" local={violinMenu(data, lang)} />
-<div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
+<div class="lg:grid md:p-5 bg-text" style="grid-template-columns: 3fr 1fr">
   <div>
     <TextBar alignment="left">
       <h1 class="text-3xl">{data['reviews'].toUpperCase()}</h1>
       {#each data['reviewList'] as { text, name, position }}
-        <p class="mt-12">
+        <p class="mt-10">
           <Format {text} />
           <span class="uppercase mt-2 inline-block"><Format text={name} /></span>
           <span class="italic"><Format text={position} /></span>
