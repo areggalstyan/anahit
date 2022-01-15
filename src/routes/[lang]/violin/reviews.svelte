@@ -37,7 +37,8 @@
     </TextBar>
   </div>
   <div class="mt-5">
-    <div class="bg-text p-5 md:grid md:grid-cols-4 md:gap-8 lg:block" class:pt-0={data['calendar']}>
+    <div class="bg-text p-5 pt-0 md:grid md:grid-cols-4 md:gap-8 lg:block"
+         class:pt-0={data['calendar']}>
       <Images {data} />
     </div>
   </div>
