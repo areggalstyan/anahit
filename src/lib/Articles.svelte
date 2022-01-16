@@ -8,7 +8,7 @@
 <TextBar alignment="left">
   <slot />
   {#each data['articleList'] as { text }}
-    <p class="mt-12">
+    <p class="mt-5 md:mt-10">
       <Format {text} />
     </p>
   {/each}

@@ -42,11 +42,11 @@
 </svelte:head>
 
 <Header {data} {lang} route="/violin/concert-tours" local={violinMenu(data, lang)} />
-<div class="lg:grid md:p-8 bg-text">
+<div class="lg:grid md:p-5 bg-text">
   <TextBar alignment="left">
     <h1 class="text-3xl">{data['concertTours'].toUpperCase()}</h1>
     <div class="w-full text-center">
-      <div id="map" class="h-96 md:h-[48rem] mt-12 bg-text"></div>
+      <div id="map" class="h-96 md:h-[48rem] md:mt-10 mt-5 bg-text"></div>
     </div>
     <div class="mt-3">
       <Format text={data['note']} />

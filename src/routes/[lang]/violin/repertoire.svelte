@@ -28,7 +28,7 @@
 
 <div class="min-h-screen bg-text flex flex-col">
   <Header {data} {lang} route="/violin/repertoire" local={violinMenu(data, lang)} />
-  <div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
+  <div class="lg:grid md:p-5 bg-text" style="grid-template-columns: 3fr 1fr">
     <div>
       <Articles {data}>
         <h1 class="text-3xl">{data['repertoire'].toUpperCase()}</h1>
@@ -50,7 +50,7 @@
         </p>
       </TextBar>
     </div>
-    <div class="bg-text p-5 md:grid md:grid-cols-4 md:gap-8 lg:block mt-5">
+    <div class="bg-text p-5 pt-0 md:grid md:grid-cols-4 md:gap-8 lg:block mt-5">
       <Images {data} />
     </div>
   </div>

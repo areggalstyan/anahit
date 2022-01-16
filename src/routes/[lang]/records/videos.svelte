@@ -24,11 +24,11 @@
 </script>
 
 <Header {data} {lang} route="/records/videos" local={recordsMenu(data, lang)} />
-<div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
+<div class="lg:grid md:p-5 bg-text" style="grid-template-columns: 3fr 1fr">
   <TextBar alignment="left">
     <h1 class="text-3xl">{data['videos'].toUpperCase()}</h1>
     {#each data['articleList'] as { text }}
-      <p class="mt-12">
+      <p class="md:mt-10 mt-5">
         <Format {text} />
       </p>
     {/each}
@@ -50,7 +50,7 @@
       </div>
     {/each}
   </TextBar>
-  <div class="bg-text p-5 md:grid md:grid-cols-4 md:gap-8 lg:block">
+  <div class="bg-text p-5 pt-0 md:grid md:grid-cols-4 md:gap-8 lg:block">
     <Images {data} />
   </div>
 </div>

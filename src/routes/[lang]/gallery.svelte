@@ -70,12 +70,12 @@
 </svelte:head>
 
 <Header {data} {lang} route="/gallery" />
-<div class="md:p-8 bg-text">
+<div class="md:p-5 bg-text">
   <TextBar alignment="left">
     <h1 class="text-3xl">{data['solo'].toUpperCase()}</h1>
 
     {#if data['soloArticle']}
-      <p class="mt-12">
+      <p class="md:mt-10 mt-5">
         <Format text={data['soloArticle']} />
       </p>
     {/if}
@@ -109,7 +109,7 @@
     <h2 class="text-2xl mt-8">{data['team'].toUpperCase()}</h2>
 
     {#if data['teamArticle']}
-      <p class="mt-12">
+      <p class="md:mt-10 mt-5">
         <Format text={data['teamArticle']} />
       </p>
     {/if}

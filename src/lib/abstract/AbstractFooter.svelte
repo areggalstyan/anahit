@@ -13,9 +13,9 @@
       <NavBar {items} alignment="center" last>
         <div class="ml-2 sm:ml-4 border-white border-[1px] p-1 pl-3 pr-3 rounded inline-block">
           <NavBar items={[
-            { name: 'eng', href: `/en/${route}`, external: true },
-            { name: 'рус', href: `/ru/${route}`, external: true },
-            { name: 'հայ', href: `/hy/${route}`, external: true }
+            { name: 'eng', href: `/en${route}`, external: true },
+            { name: 'рус', href: `/ru${route}`, external: true },
+            { name: 'հայ', href: `/hy${route}`, external: true }
           ]} />
         </div>
       </NavBar>
@@ -26,9 +26,9 @@
     <div class="sm:hidden flex justify-center mt-4">
       <div class="inline-block sm:ml-2 border-white border-[1px] p-1 pl-3 pr-3 rounded">
         <NavBar items={[
-          { name: 'eng', href: `/en/${route}`, external: true },
-          { name: 'рус', href: `/ru/${route}`, external: true },
-          { name: 'հայ', href: `/hy/${route}`, external: true }
+          { name: 'eng', href: `/en${route}`, external: true },
+          { name: 'рус', href: `/ru${route}`, external: true },
+          { name: 'հայ', href: `/hy${route}`, external: true }
         ]} />
       </div>
     </div>

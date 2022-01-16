@@ -28,11 +28,11 @@
 </svelte:head>
 
 <Header {data} {lang} route="/records/vinyl" local={recordsMenu(data, lang)} />
-<div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
+<div class="lg:grid md:p-5 bg-text" style="grid-template-columns: 3fr 1fr">
   <TextBar alignment="left">
     <h1 class="text-3xl">{data['vinyl'].toUpperCase()}</h1>
     {#each data['articleList'] as { text }}
-      <p class="mt-12">
+      <p class="md:mt-10 mt-5">
         <Format {text} />
       </p>
     {/each}

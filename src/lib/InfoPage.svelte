@@ -18,7 +18,7 @@
 </script>
 
 <Header {data} {lang} {route} {local} />
-<div class="lg:grid md:p-8 bg-text" style="grid-template-columns: 3fr 1fr">
+<div class="lg:grid md:p-5 bg-text" style="grid-template-columns: 3fr 1fr">
   <div>
     <Articles {data}>
       <h1 class="text-3xl">{subtitle}</h1>
@@ -39,7 +39,7 @@
       {#if data['calendarTitle']}
         <h2 class="text-center">{data['calendarTitle']}</h2>
       {/if}
-      <div class="bg-text p-5 pb-0 mb-5 lg:mb-0">
+      <div class="bg-text p-5 pb-0 mb-5">
         <div class="grid grid-cols-4">
           {#each data['calendar'] as { date, text }, i}
             <button class="p-1 border-secondary text-sm" class:font-bold={selected === date}
@@ -61,7 +61,7 @@
         {/if}
       </div>
     {/if}
-    <div class="bg-text p-5 md:grid md:grid-cols-4 md:gap-8 lg:block" class:pt-0={data['calendar']}>
+    <div class="bg-text p-5 pt-0 md:grid md:grid-cols-4 md:gap-8 lg:block" class:pt-0={data['calendar']}>
       <Images {data} />
     </div>
   </div>
