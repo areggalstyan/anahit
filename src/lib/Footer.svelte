@@ -23,4 +23,4 @@
   ]}
 />
 <Logo {data} />
-<audio src={url(data['background'])} autoplay loop></audio>
+<audio src={url(data['background'])} autoplay></audio>
