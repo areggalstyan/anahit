@@ -11,7 +11,15 @@ export function getNextLang(lang) {
 export const globalMenu = (data, lang) => {
   return {
     items: [
-      { name: data['name'], href: `/${lang}/anahit` },
+      {
+        name: data['name'],href: `/${lang}/anahit`,
+        dropdown: [
+          { name: data['creativePath'], href: `/${lang}/anahit` },
+          { name: data['biography'], href: `/${lang}/anahit/biography` },
+          { name: data['newspaper'], href: `/${lang}/anahit/newspaper` },
+          { name: data['diaryStories'], href: `/${lang}/anahit/diary-stories` }
+        ]
+      },
       {
         name: data['musician'],
         dropdown: [
