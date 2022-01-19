@@ -12,7 +12,7 @@ export const globalMenu = (data, lang) => {
   return {
     items: [
       {
-        name: data['name'],href: `/${lang}/anahit`,
+        name: data['name'],
         dropdown: [
           { name: data['creativePath'], href: `/${lang}/anahit` },
           { name: data['biography'], href: `/${lang}/anahit/biography` },
