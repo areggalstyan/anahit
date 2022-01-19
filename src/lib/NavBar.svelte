@@ -17,30 +17,6 @@
   class:justify-end={alignment === 'end'}
 >
   <ul class:text-center={vertical}>
-    {#if more}
-      <li class="md:inline-block list-none lg:hidden text-{text}" class:li={bars}>
-        <div class="group inline-block">
-          <Link>
-            {more}
-            <i class="fas fa-caret-down ml-1" />
-          </Link>
-          <ul class="hidden group-hover:block"
-              class:absolute={!vertical}
-              class:bg-secondary={!vertical && fill}
-              class:p-4={!vertical && fill}
-              class:rounded={!vertical && fill}
-          >
-            {#each items as { name, href, classes, dropdown }}
-              {#if !dropdown}
-                <li class="list-none {classes ? classes : ''}">
-                  <Link {href}>{name}</Link>
-                </li>
-              {/if}
-            {/each}
-          </ul>
-        </div>
-      </li>
-    {/if}
     {#each items as { name, href, external, dropdown, classes }}
       <li
         class="lg:inline-block list-none"
@@ -76,6 +52,30 @@
         </div>
       </li>
     {/each}
+    {#if more}
+      <li class="md:inline-block list-none lg:hidden text-{text}" class:li={bars}>
+        <div class="group inline-block">
+          <Link>
+            {more}
+            <i class="fas fa-caret-down ml-1" />
+          </Link>
+          <ul class="hidden group-hover:block"
+              class:absolute={!vertical}
+              class:bg-secondary={!vertical && fill}
+              class:p-4={!vertical && fill}
+              class:rounded={!vertical && fill}
+          >
+            {#each items as { name, href, classes, dropdown }}
+              {#if !dropdown}
+                <li class="list-none {classes ? classes : ''}">
+                  <Link {href}>{name}</Link>
+                </li>
+              {/if}
+            {/each}
+          </ul>
+        </div>
+      </li>
+    {/if}
     {#if $$slots.default}
       <li class="inline-block">
         <slot />
@@ -85,12 +85,8 @@
 </nav>
 
 <style>
-  .li:not(:last-child, .last:nth-last-child(2))::after {
+  .li:not(:first-child, .last:last-child)::before {
     content: '|';
     @apply ml-2 mr-2 sm:ml-4 sm:mr-4 text-white;
-  }
-
-  .li:nth-child(4)::after {
-      @apply hidden lg:inline;
   }
 </style>
