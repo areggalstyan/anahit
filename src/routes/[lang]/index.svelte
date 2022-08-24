@@ -56,3 +56,4 @@
 />
 <TextBar><Format text={data['article5']} /></TextBar>
 <Footer {data} {lang} route="/" />
+<audio src={url(data['background'])} autoplay></audio>

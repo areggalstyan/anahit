@@ -23,4 +23,3 @@
   ]}
 />
 <Logo {data} />
-<audio src={url(data['background'])} autoplay></audio>
