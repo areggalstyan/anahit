@@ -26,6 +26,10 @@
   });
 </script>
 
+<svelte:head>
+  <title>{data['videos']}</title>
+</svelte:head>
+
 <Header {data} {lang} route="/records/videos" local={recordsMenu(data, lang)} />
 <div class="lg:grid md:p-5 bg-text" style="grid-template-columns: 3fr 1fr">
   <TextBar alignment="left">
