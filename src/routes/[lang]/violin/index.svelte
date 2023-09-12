@@ -18,5 +18,10 @@
   <title>{data['violinHome']}</title>
 </svelte:head>
 
-<InfoPage route="/violin" {data} {lang} subtitle={data['violinHome'].toUpperCase()}
-          local={violinMenu(data, lang)}/>
+<InfoPage
+  route="/violin"
+  {data}
+  {lang}
+  subtitle={data['violinHome'].toUpperCase()}
+  local={violinMenu(data, lang)}
+/>

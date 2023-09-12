@@ -44,7 +44,7 @@ export const globalMenu = (data, lang) => {
     ],
     more: data['persona']
   };
-}
+};
 
 export const biographyMenu = (data, lang) => {
   return [
@@ -53,7 +53,7 @@ export const biographyMenu = (data, lang) => {
     { name: data['newspaper'], href: `/${lang}/anahit/newspaper` },
     { name: data['diaryStories'], href: `/${lang}/anahit/diary-stories` }
   ];
-}
+};
 
 export const researchMenu = (data, lang) => {
   return [
@@ -62,7 +62,7 @@ export const researchMenu = (data, lang) => {
     { name: data['books'], href: `/${lang}/research/books` },
     { name: data['articles'], href: `/${lang}/research/articles` }
   ];
-}
+};
 
 export const violinMenu = (data, lang) => {
   return [
@@ -71,7 +71,7 @@ export const violinMenu = (data, lang) => {
     { name: data['repertoire'], href: `/${lang}/violin/repertoire` },
     { name: data['concertTours'], href: `/${lang}/violin/concert-tours` }
   ];
-}
+};
 
 export const heritageMenu = (data, lang) => {
   return [
@@ -79,7 +79,7 @@ export const heritageMenu = (data, lang) => {
     { name: data['school'], href: `/${lang}/heritage/school` },
     { name: data['foundation'], href: `/${lang}/heritage/foundation` }
   ];
-}
+};
 
 export const recordsMenu = (data, lang) => {
   return [
@@ -88,7 +88,7 @@ export const recordsMenu = (data, lang) => {
     { name: data['cd'], href: `/${lang}/records/cd` },
     { name: data['videos'], href: `/${lang}/records/videos` }
   ];
-}
+};
 
 export function url(image) {
   return image['url'].replace('upload', 'upload/q_80');

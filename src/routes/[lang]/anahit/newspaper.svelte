@@ -18,5 +18,11 @@
   <title>{data['newspaper']}</title>
 </svelte:head>
 
-<InfoPage route="/anahit/newspaper" {data} {lang} subtitle={data['newspaper'].toUpperCase()}
-          local={biographyMenu(data, lang)} bigCalendar />
+<InfoPage
+  route="/anahit/newspaper"
+  {data}
+  {lang}
+  subtitle={data['newspaper'].toUpperCase()}
+  local={biographyMenu(data, lang)}
+  bigCalendar
+/>

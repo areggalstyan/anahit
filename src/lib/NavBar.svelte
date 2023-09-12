@@ -26,7 +26,7 @@
         class:li={bars}
         class:hidden={!dropdown && more}
         class:inline-block={(dropdown || !more) && !vertical}
-        class:last={last}
+        class:last
       >
         <div class="group inline-block {classes ? classes : ''}">
           <Link {href} {external}>
@@ -36,11 +36,12 @@
             {/if}
           </Link>
           {#if dropdown}
-            <ul class="hidden group-hover:block"
-                class:absolute={!vertical}
-                class:bg-secondary={!vertical && fill}
-                class:p-4={!vertical && fill}
-                class:rounded={!vertical && fill}
+            <ul
+              class="hidden group-hover:block"
+              class:absolute={!vertical}
+              class:bg-secondary={!vertical && fill}
+              class:p-4={!vertical && fill}
+              class:rounded={!vertical && fill}
             >
               {#each dropdown as { name, href }}
                 <li class="list-none">
@@ -59,11 +60,12 @@
             {more}
             <i class="fas fa-caret-down ml-1" />
           </Link>
-          <ul class="hidden group-hover:block"
-              class:absolute={!vertical}
-              class:bg-secondary={!vertical && fill}
-              class:p-4={!vertical && fill}
-              class:rounded={!vertical && fill}
+          <ul
+            class="hidden group-hover:block"
+            class:absolute={!vertical}
+            class:bg-secondary={!vertical && fill}
+            class:p-4={!vertical && fill}
+            class:rounded={!vertical && fill}
           >
             {#each items as { name, href, classes, dropdown }}
               {#if !dropdown}

@@ -18,5 +18,10 @@
   <title>{data['name']}</title>
 </svelte:head>
 
-<InfoPage route="/anahit" {data} {lang} subtitle={data['creativePath'].toUpperCase()}
-          local={biographyMenu(data, lang)}/>
+<InfoPage
+  route="/anahit"
+  {data}
+  {lang}
+  subtitle={data['creativePath'].toUpperCase()}
+  local={biographyMenu(data, lang)}
+/>

@@ -16,9 +16,11 @@
   export let data;
   export let lang;
 
-  data['imageList'] = data['imageList'].map(article => {
-    article['text'] = article['text'].replace(/\/O/g,
-      '<i class="fas fa-record-vinyl text-3xl text-secondary mr-4"></i>');
+  data['imageList'] = data['imageList'].map((article) => {
+    article['text'] = article['text'].replace(
+      /\/O/g,
+      '<i class="fas fa-record-vinyl text-3xl text-secondary mr-4"></i>'
+    );
     return article;
   });
 </script>
@@ -39,7 +41,11 @@
     {#each data['imageList'] as vinyl}
       <div class="mt-12 md:flex">
         {#if vinyl['image']}
-          <img src={url(vinyl['image'])} alt="" class="border-[1px] border-secondary rounded w-80 h-80">
+          <img
+            src={url(vinyl['image'])}
+            alt=""
+            class="border-[1px] border-secondary rounded w-80 h-80"
+          />
         {/if}
         <p class="md:ml-12 md:mt-0 mt-3">
           <Format text={vinyl['text']} />

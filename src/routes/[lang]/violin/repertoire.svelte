@@ -17,8 +17,10 @@
   export let data;
   export let lang;
 
-  $: alphabet = data['lines'].map(line => line['line'][0])
-    .filter((value, index, self) => self.indexOf(value) === index).sort();
+  $: alphabet = data['lines']
+    .map((line) => line['line'][0])
+    .filter((value, index, self) => self.indexOf(value) === index)
+    .sort();
   $: selected = data['all'];
 </script>
 
@@ -34,17 +36,27 @@
         <h1 class="text-3xl">{data['repertoire'].toUpperCase()}</h1>
       </Articles>
       <TextBar alignment="left">
-        <button class="mr-3" class:font-bold={selected === data['all']} on:click={() => selected = data['all']}>
-          {data['all'].toUpperCase()}</button>
+        <button
+          class="mr-3"
+          class:font-bold={selected === data['all']}
+          on:click={() => (selected = data['all'])}
+        >
+          {data['all'].toUpperCase()}</button
+        >
         {#each alphabet as letter}
-          <button class="mr-3" class:font-bold={selected === letter}
-                  on:click={() => selected = letter}>{letter}</button>
+          <button
+            class="mr-3"
+            class:font-bold={selected === letter}
+            on:click={() => (selected = letter)}>{letter}</button
+          >
         {/each}
         <p class="mt-5">
           {#if selected}
-            {#each data['lines'].filter(line => selected === data['all']
-              ? line['line'] : line['line'][0] === selected).map(line => line['line']).sort() as line}
-              {line}<br>
+            {#each data['lines']
+              .filter( (line) => (selected === data['all'] ? line['line'] : line['line'][0] === selected) )
+              .map((line) => line['line'])
+              .sort() as line}
+              {line}<br />
             {/each}
           {/if}
         </p>

@@ -35,19 +35,23 @@
     {/if}
   </div>
   <div class="mt-5">
-    {#if data['calendar'] && data['calendar'].sort((a, b) => !a.length ? 1 : a.date - b.date)}
+    {#if data['calendar'] && data['calendar'].sort((a, b) => (!a.length ? 1 : a.date - b.date))}
       {#if data['calendarTitle']}
         <h2 class="text-center">{data['calendarTitle']}</h2>
       {/if}
       <div class="bg-text p-5 pb-0 mb-5">
         <div class="grid grid-cols-4">
           {#each data['calendar'] as { date, text }, i}
-            <button class="p-1 border-secondary text-sm" class:font-bold={selected === date}
-                    class:border-t-[1px]={i > 3} class:border-r-[1px]={i % 4 !== 3}
-                    on:click={() => {
-                  current = text;
-                  selected = date;
-                }}>
+            <button
+              class="p-1 border-secondary text-sm"
+              class:font-bold={selected === date}
+              class:border-t-[1px]={i > 3}
+              class:border-r-[1px]={i % 4 !== 3}
+              on:click={() => {
+                current = text;
+                selected = date;
+              }}
+            >
               {#if date}
                 {date}
               {/if}

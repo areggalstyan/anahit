@@ -15,15 +15,18 @@
 </script>
 
 <header class="relative">
-  <div class="flex items-center relative top-0 w-full border-b-[1px] border-white p-4 sm:pl-12 sm:pr-12 bg-secondary">
+  <div
+    class="flex items-center relative top-0 w-full border-b-[1px] border-white p-4 sm:pl-12 sm:pr-12 bg-secondary"
+  >
     <div class="w-full">
-      <IconLink href="/{getNextLang(lang)}{route}" external><i class="text-2xl fas fa-globe mr-6" /></IconLink
+      <IconLink href="/{getNextLang(lang)}{route}" external
+        ><i class="text-2xl fas fa-globe mr-6" /></IconLink
       >
       <Link href="/{lang}"
-      ><h1 class="text-2xl lg:text-3xl text-white font-bold inline-block">
-        {name}
-        {surname}
-      </h1></Link
+        ><h1 class="text-2xl lg:text-3xl text-white font-bold inline-block">
+          {name}
+          {surname}
+        </h1></Link
       >
       <div class="md:hidden w-full inline-block flex justify-end">
         <div>

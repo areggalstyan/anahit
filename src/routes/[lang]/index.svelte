@@ -28,32 +28,37 @@
 <TextBar><Format text={data['article1']} /></TextBar>
 <ImageBar
   images={[
-    { name: data['biography'], src: url(data['biographyImage']), href: `/${lang}/anahit/biography` },
-    { name: data['repertoire'], src: url(data['repertoireImage']), href: `/${lang}/violin/repertoire` },
+    {
+      name: data['biography'],
+      src: url(data['biographyImage']),
+      href: `/${lang}/anahit/biography`
+    },
+    {
+      name: data['repertoire'],
+      src: url(data['repertoireImage']),
+      href: `/${lang}/violin/repertoire`
+    },
     { name: data['records'], src: url(data['recordsImage']), href: `/${lang}/records` },
     { name: data['pedagogue'], src: url(data['pedagogyImage']), href: `/${lang}/pedagogy` }
   ]}
 />
 <TextBar><Format text={data['article2']} /></TextBar>
-<VideoBar
-  videos={[
-    data['video1'],
-    data['video2']
-  ]}
-/>
+<VideoBar videos={[data['video1'], data['video2']]} />
 <TextBar><Format text={data['article3']} /></TextBar>
 <ImageBar
   images={[
     { name: data['scientist'], src: url(data['researchImage']), href: `/${lang}/research` },
     { name: data['books'], src: url(data['booksImage']), href: `/${lang}/research/books` },
     { name: data['gallery'], src: url(data['galleryImage']), href: `/${lang}/gallery` },
-    { name: data['diaryStories'], src: url(data['diaryStoriesImage']), href: `/${lang}/anahit/diary-stories` }
+    {
+      name: data['diaryStories'],
+      src: url(data['diaryStoriesImage']),
+      href: `/${lang}/anahit/diary-stories`
+    }
   ]}
 />
 <TextBar><Format text={data['article4']} /></TextBar>
-<Slider
-  slides={data['slider'].map(slide => url(slide))}
-/>
+<Slider slides={data['slider'].map((slide) => url(slide))} />
 <TextBar><Format text={data['article5']} /></TextBar>
 <Footer {data} {lang} route="/" />
-<audio src={url(data['background'])} autoplay></audio>
+<audio src={url(data['background'])} autoplay />

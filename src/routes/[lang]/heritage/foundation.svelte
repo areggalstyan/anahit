@@ -18,5 +18,10 @@
   <title>{data['foundation']}</title>
 </svelte:head>
 
-<InfoPage route="/heritage/foundation" {data} {lang} subtitle={data['foundation'].toUpperCase()}
-          local={heritageMenu(data, lang)}/>
+<InfoPage
+  route="/heritage/foundation"
+  {data}
+  {lang}
+  subtitle={data['foundation'].toUpperCase()}
+  local={heritageMenu(data, lang)}
+/>

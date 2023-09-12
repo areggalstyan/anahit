@@ -9,7 +9,7 @@
   <a
     {href}
     class="text-white hover:text-icon {classes ? classes : ''}"
-    target={target}
+    {target}
     rel={external ? 'external' : null}><slot /></a
   >
 {:else}

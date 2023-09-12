@@ -17,8 +17,11 @@
   export let data;
   export let lang;
 
-  data['videoList'] = data['videoList'].map(video => {
-    video['text'] = video['text'].replace(/\/O/g, '<i class="fas fa-play-circle text-3xl text-secondary mr-4"></i>');
+  data['videoList'] = data['videoList'].map((video) => {
+    video['text'] = video['text'].replace(
+      /\/O/g,
+      '<i class="fas fa-play-circle text-3xl text-secondary mr-4"></i>'
+    );
     return video;
   });
 </script>
@@ -41,7 +44,7 @@
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write;
                             encrypted-media; gyroscope; picture-in-picture"
-          class="border-secondary border-4 rounded max-w-full"
+          class="border-secondary border-4 rounded max-w-full flex-shrink-0"
           allowFullScreen
         />
         <p class="md:ml-12 md:mt-0 mt-3">

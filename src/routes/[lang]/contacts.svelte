@@ -22,72 +22,72 @@
     <div class="lg:inline-block lg:mr-12">
       {#if data['address1'] || data['telephone1'] || data['email1'] || data['viber1'] || data['whatsapp1']}
         <p class="mt-5 md:mt-10 rounded p-5 text-white bg-primary inline-flex flex-col">
-        <span>
-          {#if data['address1']}
-            <i class="fas fa-map-marker-alt text-xl mr-3" />
-            <span class="ml-[5px]">{data['address1']}</span>
-          {/if}
-        </span>
           <span>
-          {#if data['telephone1']}
-            <i class="fas fa-phone-alt text-xl mr-3" />
-            {data['telephone1']}
-          {/if}
-        </span>
+            {#if data['address1']}
+              <i class="fas fa-map-marker-alt text-xl mr-3" />
+              <span class="ml-[5px]">{data['address1']}</span>
+            {/if}
+          </span>
           <span>
-          {#if data['email1']}
-            <i class="fas fa-envelope text-xl mr-3" />
-            {data['email1']}
-          {/if}
-        </span>
+            {#if data['telephone1']}
+              <i class="fas fa-phone-alt text-xl mr-3" />
+              {data['telephone1']}
+            {/if}
+          </span>
           <span>
-          {#if data['viber1']}
-            <i class="fab fa-viber text-xl mr-3" />
-            {data['viber1']}
-          {/if}
-        </span>
+            {#if data['email1']}
+              <i class="fas fa-envelope text-xl mr-3" />
+              {data['email1']}
+            {/if}
+          </span>
           <span>
-          {#if data['whatsapp1']}
-            <i class="fab fa-whatsapp text-xl mr-3" />
-            <span class="ml-[2.5px]">{data['whatsapp1']}</span>
-          {/if}
-        </span>
+            {#if data['viber1']}
+              <i class="fab fa-viber text-xl mr-3" />
+              {data['viber1']}
+            {/if}
+          </span>
+          <span>
+            {#if data['whatsapp1']}
+              <i class="fab fa-whatsapp text-xl mr-3" />
+              <span class="ml-[2.5px]">{data['whatsapp1']}</span>
+            {/if}
+          </span>
         </p>
       {/if}
     </div>
     <div class="inline-block">
       {#if data['address2'] || data['telephone2'] || data['email2'] || data['viber2'] || data['whatsapp2']}
         <p class="mt-10 rounded p-5 text-white bg-primary inline-flex flex-col">
-        <span>
-          {#if data['address2']}
-            <i class="fas fa-map-marker-alt text-xl mr-3" />
-            <span class="ml-[5px]">{data['address2']}</span>
-          {/if}
-        </span>
           <span>
-          {#if data['telephone2']}
-            <i class="fas fa-phone-alt text-xl mr-3" />
-            {data['telephone2']}
-          {/if}
-        </span>
+            {#if data['address2']}
+              <i class="fas fa-map-marker-alt text-xl mr-3" />
+              <span class="ml-[5px]">{data['address2']}</span>
+            {/if}
+          </span>
           <span>
-          {#if data['email2']}
-            <i class="fas fa-envelope text-xl mr-3" />
-            {data['email2']}
-          {/if}
-        </span>
+            {#if data['telephone2']}
+              <i class="fas fa-phone-alt text-xl mr-3" />
+              {data['telephone2']}
+            {/if}
+          </span>
           <span>
-          {#if data['viber2']}
-            <i class="fab fa-viber text-xl mr-3" />
-            {data['viber2']}
-          {/if}
-        </span>
+            {#if data['email2']}
+              <i class="fas fa-envelope text-xl mr-3" />
+              {data['email2']}
+            {/if}
+          </span>
           <span>
-          {#if data['whatsapp2']}
-            <i class="fab fa-whatsapp text-xl mr-3" />
-            <span class="ml-[2.5px]">{data['whatsapp2']}</span>
-          {/if}
-        </span>
+            {#if data['viber2']}
+              <i class="fab fa-viber text-xl mr-3" />
+              {data['viber2']}
+            {/if}
+          </span>
+          <span>
+            {#if data['whatsapp2']}
+              <i class="fab fa-whatsapp text-xl mr-3" />
+              <span class="ml-[2.5px]">{data['whatsapp2']}</span>
+            {/if}
+          </span>
         </p>
       {/if}
     </div>
