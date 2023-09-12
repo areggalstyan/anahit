@@ -13,6 +13,7 @@
   import Footer from '$lib/Footer.svelte';
   import TextBar from '$lib/TextBar.svelte';
   import Format from '$lib/Format.svelte';
+  import Video from '$lib/Video.svelte';
 
   export let data;
   export let lang;
@@ -40,18 +41,9 @@
       </p>
     {/each}
     {#each data['videoList'] as { src, text }}
-      <div class="mt-12 md:flex">
-        <iframe
-          width="560"
-          height="315"
-          {src}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write;
-                            encrypted-media; gyroscope; picture-in-picture"
-          class="border-secondary border-4 rounded max-w-full flex-shrink-0"
-          allowFullScreen
-        />
-        <p class="md:ml-12 md:mt-0 mt-3">
+      <div class="mt-12 xl:flex">
+        <Video {src} />
+        <p class="xl:ml-12 xl:mt-0 mt-3">
           <Format {text} />
         </p>
       </div>
