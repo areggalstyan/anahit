@@ -13,13 +13,12 @@
   import Format from '$lib/Format.svelte';
   import { onMount } from 'svelte';
   import Footer from '$lib/Footer.svelte';
-  import { browser } from '$app/env';
 
   export let data;
   export let lang;
 
   onMount(() => {
-    if (browser) {
+    jQuery(document).ready(() => {
       jQuery('.slider-solo').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -65,7 +64,7 @@
           '<button class="cursor-pointer"><i class="fas fa-chevron-right text-xl ' +
           'text-white absolute top-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 right-0"></i></button>'
       });
-    }
+    });
   });
 </script>
 

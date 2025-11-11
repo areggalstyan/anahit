@@ -1,11 +1,10 @@
 <script>
   import { onMount } from 'svelte';
-  import { browser } from '$app/env';
 
   export let slides;
 
   onMount(() => {
-    if (browser) {
+    jQuery(document).ready(() => {
       jQuery('.slider').slick({
         infinite: true,
         speed: 300,
@@ -17,7 +16,7 @@
           '<button class="cursor-pointer"><i class="fas fa-chevron-right text-xl ' +
           'text-white absolute top-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 right-0"></i></button>'
       });
-    }
+    });
   });
 </script>
 
