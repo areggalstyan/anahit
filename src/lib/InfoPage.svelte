@@ -69,5 +69,6 @@
       <Images {data} />
     </div>
   </div>
+  <slot />
 </div>
 <Footer {data} {lang} {route} />

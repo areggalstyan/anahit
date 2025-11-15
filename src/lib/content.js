@@ -17,7 +17,8 @@ export const globalMenu = (data, lang) => {
           { name: data['creativePath'], href: `/${lang}/anahit` },
           { name: data['biography'], href: `/${lang}/anahit/biography` },
           { name: data['newspaper'], href: `/${lang}/anahit/newspaper` },
-          { name: data['diaryStories'], href: `/${lang}/anahit/diary-stories` }
+          { name: data['diaryStories'], href: `/${lang}/anahit/diary-stories` },
+          { name: data['filmBook'], href: `/${lang}/anahit/film-book` }
         ]
       },
       {
@@ -51,7 +52,8 @@ export const biographyMenu = (data, lang) => {
     { name: data['creativePath'], href: `/${lang}/anahit` },
     { name: data['biography'], href: `/${lang}/anahit/biography` },
     { name: data['newspaper'], href: `/${lang}/anahit/newspaper` },
-    { name: data['diaryStories'], href: `/${lang}/anahit/diary-stories` }
+    { name: data['diaryStories'], href: `/${lang}/anahit/diary-stories` },
+    { name: data['filmBook'], href: `/${lang}/anahit/film-book` }
   ];
 };
 

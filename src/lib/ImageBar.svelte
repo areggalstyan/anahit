@@ -3,7 +3,7 @@
   export let images;
 </script>
 
-<div class="bg-primary grid grid-cols-1 lg:grid-cols-4 gap-5 p-5">
+<div class="bg-primary grid grid-cols-1 lg:grid-cols-{images.length} gap-5 p-5">
   {#each images as { name, src, href }, i}
     <div>
       <Link {href} classes="w-full">

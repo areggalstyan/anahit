@@ -25,6 +25,11 @@
 </svelte:head>
 
 <HomeHeader {data} {lang} />
+<ImageBar
+  images={[
+    { name: data['filmBook'], src: '/book/page-2.webp', href: `/${lang}/anahit/film-book` },
+  ]}
+/>
 <TextBar><Format text={data['article1']} /></TextBar>
 <ImageBar
   images={[
