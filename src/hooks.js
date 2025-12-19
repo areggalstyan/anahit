@@ -2,13 +2,6 @@ const supportedLanguages = ['en', 'ru', 'hy'];
 
 export async function handle({ request, resolve }) {
   const response = await resolve(request);
-
-  if (request.path === '/robots.txt') {
-    return {
-      status: 404
-    }
-  }
-
   const path = request.path.split('/');
   const lang = path[1];
 
