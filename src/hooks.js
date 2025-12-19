@@ -18,19 +18,21 @@ export async function handle({ request, resolve }) {
     };
   }
 
-  const acceptLanguages = request.headers['accept-language']
-    .split(';')
-    .map((lang) => lang.split(','));
+  if (request.headers['accept-language']) {
+    const acceptLanguages = request.headers['accept-language']
+      .split(';')
+      .map((lang) => lang.split(','));
 
-  for (let acceptLang of acceptLanguages) {
-    for (let acceptSubLang of acceptLang) {
-      if (supportedLanguages.includes(acceptSubLang)) {
-        path[1] = acceptSubLang;
+    for (let acceptLang of acceptLanguages) {
+      for (let acceptSubLang of acceptLang) {
+        if (supportedLanguages.includes(acceptSubLang)) {
+          path[1] = acceptSubLang;
 
-        return {
-          status: 302,
-          headers: { Location: path.join('/') }
-        };
+          return {
+            status: 302,
+            headers: { Location: path.join('/') }
+          };
+        }
       }
     }
   }
